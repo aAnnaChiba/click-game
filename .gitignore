@@ -1,0 +1,15 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot-specific
+.import/
+export.cfg
+export_presets.cfg
+
+# OS/Editor/IDE files
+.DS_Store
+Thumbs.db
+
+# Optional: VSCodeなどIDEの設定
+.vscode/
