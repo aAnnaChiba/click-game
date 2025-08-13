@@ -7,4 +7,12 @@
  	{
  		GD.Print("C# is ready!");
  	}
+	
+	public override void _Process(double delta)
+	{
+		if (Input.IsKeyPressed(Key.A))
+		{
+			GD.Print("A key is pressed!");
+		}
+	}
  }
