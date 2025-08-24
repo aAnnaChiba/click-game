@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="click-game"
-run/main_scene="uid://dqiaeu7sc844d"
+run/main_scene="uid://c4pmcaqdmxil8"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

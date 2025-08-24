@@ -1,6 +1,7 @@
-[gd_scene load_steps=199 format=4 uid="uid://c4pmcaqdmxil8"]
+[gd_scene load_steps=200 format=4 uid="uid://c4pmcaqdmxil8"]
 
 [ext_resource type="PackedScene" uid="uid://ntvwnbu6jbpb" path="res://scenes/camera/Camera.tscn" id="1_6iw8k"]
+[ext_resource type="Script" uid="uid://4njdbsgenss3" path="res://scenes/main_scene/MainScene.cs" id="1_8nih1"]
 [ext_resource type="Texture2D" uid="uid://c2n0oshn1twp3" path="res://assets/Sprites/UI_Flat_Banner01a.png" id="2_gvpmi"]
 [ext_resource type="Texture2D" uid="uid://cxwxqy372t41m" path="res://assets/Sprites/UI_Flat_Banner02a.png" id="3_8nih1"]
 [ext_resource type="Texture2D" uid="uid://dc3bphatop2tl" path="res://assets/Sprites/UI_Flat_Bar07a.png" id="4_rja16"]
@@ -719,6 +720,7 @@ sources/96 = SubResource("TileSetAtlasSource_cqp7r")
 sources/97 = SubResource("TileSetAtlasSource_y6ik7")
 
 [node name="MainScene" type="Node2D"]
+script = ExtResource("1_8nih1")
 
 [node name="Camera2D" parent="." instance=ExtResource("1_6iw8k")]
 
@@ -741,11 +743,11 @@ offset_left = 114.0
 offset_top = -282.0
 offset_right = 247.0
 offset_bottom = -259.0
-text = "Number of lines: "
+text = "Number of lines: 0"
 
 [node name="Bug_ratio" type="Label" parent="."]
 offset_left = 111.0
 offset_top = -162.0
 offset_right = 191.0
 offset_bottom = -139.0
-text = "Bug ratio: "
+text = "Bug ratio: 0%"
