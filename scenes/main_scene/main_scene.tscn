@@ -751,3 +751,10 @@ offset_top = -162.0
 offset_right = 191.0
 offset_bottom = -139.0
 text = "Bug ratio: 0%"
+
+[node name="Number_of_engineers" type="Label" parent="."]
+offset_left = 70.0
+offset_top = -69.0
+offset_right = 252.0
+offset_bottom = -46.0
+text = "Number of engineers: 0"
