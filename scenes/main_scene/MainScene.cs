@@ -27,15 +27,29 @@ public partial class MainScene : Node2D
 	
 	public override void _Process(double delta)
 	{
+		// Aを押した時コード行数を増やす
 		if (Input.IsActionJustPressed("KeyA"))
 		{
 			_count = (_count + 10.0) * (1 - _bug_ratio);
 		}
 		
+		// Dを押した時バグ発生率を減らす
+		if (Input.IsActionJustPressed("KeyD"))
+		{
+			_bug_ratio = _bug_ratio - 0.1;
+		}
+		
+		// Jを押した時エンジニア数を増やす
 		if (Input.IsActionJustPressed("KeyJ"))
 		{
 			_number_of_engineers = _number_of_engineers + 0.01;
 			_increment = _number_of_engineers * (1 - _bug_ratio);
+		}
+		
+		// Lを押した時QAの数を増やす
+		if (Input.IsActionJustPressed("KeyL"))
+		{
+			
 		}
 		
 		// Debug
