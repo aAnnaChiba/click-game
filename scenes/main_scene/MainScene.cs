@@ -61,7 +61,7 @@ public partial class MainScene : Node2D
 		_count = _count + _increment;
 		
 		_number_of_lines.Text = $"Number of lines: {Math.Floor(_count)}";
-		_bug_ratio_label.Text = $"Bug ratio: {_bug_ratio * 100}%";
+		_bug_ratio_label.Text = $"Bug ratio: {Math.Floor(_bug_ratio * 100)}%";
 		_number_of_engineers_label.Text = $"Number of engineers: {_number_of_engineers * 100}";
 	}
 }
