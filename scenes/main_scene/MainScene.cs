@@ -7,7 +7,8 @@ public partial class MainScene : Node2D
 	private Label _bug_ratio_label;
 	private Label _number_of_engineers_label;
 	
-	private double _count = 0;
+	private double _totalCodeLines = 0;
+	private double _workingCodeLines = 0;
 	private double _bug_ratio = 0;
 	private double _number_of_engineers = 0.0;
 	
@@ -30,7 +31,7 @@ public partial class MainScene : Node2D
 		// Aを押した時コード行数を増やす
 		if (Input.IsActionJustPressed("KeyA"))
 		{
-			_count = (_count + 10.0) * (1 - _bug_ratio);
+			_totalCodeLines = _totalCodeLines + 10.0;
 		}
 		
 		// Dを押した時バグ発生率を減らす
@@ -43,7 +44,6 @@ public partial class MainScene : Node2D
 		if (Input.IsActionJustPressed("KeyJ"))
 		{
 			_number_of_engineers = _number_of_engineers + 0.01;
-			_increment = _number_of_engineers * (1 - _bug_ratio);
 		}
 		
 		// Lを押した時QAの数を増やす
@@ -58,9 +58,10 @@ public partial class MainScene : Node2D
 			_bug_ratio = Math.Clamp(_bug_ratio + 0.1, 0.0, 1.0);
 		}		
 		
-		_count = _count + _increment;
+		_totalCodeLines = _totalCodeLines + _number_of_engineers;
+		_workingCodeLines = _totalCodeLines * (1 - _bug_ratio);
 		
-		_number_of_lines.Text = $"Number of lines: {Math.Floor(_count)}";
+		_number_of_lines.Text = $"Number of lines: {Math.Round(_workingCodeLines)}";
 		_bug_ratio_label.Text = $"Bug ratio: {Math.Round(_bug_ratio * 100)}%";
 		_number_of_engineers_label.Text = $"Number of engineers: {_number_of_engineers * 100}";
 	}
