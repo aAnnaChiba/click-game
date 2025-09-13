@@ -63,6 +63,6 @@ public partial class MainScene : Node2D
 		
 		_number_of_lines.Text = $"Number of lines: {Math.Round(_workingCodeLines)}";
 		_bug_ratio_label.Text = $"Bug ratio: {Math.Round(_bug_ratio * 100)}%";
-		_number_of_engineers_label.Text = $"Number of engineers: {_number_of_engineers * 100}";
+		_number_of_engineers_label.Text = $"Number of engineers: {Math.Round(_number_of_engineers * 100)}";
 	}
 }
