@@ -6,11 +6,13 @@ public partial class MainScene : Node2D
 	private Label _number_of_lines;
 	private Label _bug_ratio_label;
 	private Label _number_of_engineers_label;
+	private Label _number_of_QA_label;
 	
 	private double _totalCodeLines = 0;
 	private double _workingCodeLines = 0;
 	private double _bug_ratio = 0;
 	private double _number_of_engineers = 0.0;
+	private double _number_of_QA = 0.0;
 	
 	private double _increment = 0.0;
 	
@@ -23,7 +25,10 @@ public partial class MainScene : Node2D
 		_bug_ratio_label.Text = "Bug ratio: 0%";
 		
 		_number_of_engineers_label = GetNode<Label>("Number_of_engineers");
-		_bug_ratio_label.Text = "Number of engineers: 0";
+		_number_of_engineers_label.Text = "Number of engineers: 0";
+		
+		_number_of_QA_label = GetNode<Label>("Number_of_QA");
+		_number_of_QA_label.Text = "Number of QA: 0";		
 	}
 	
 	public override void _Process(double delta)
@@ -49,7 +54,7 @@ public partial class MainScene : Node2D
 		// Lを押した時QAの数を増やす
 		if (Input.IsActionJustPressed("KeyL"))
 		{
-			
+			_number_of_QA = _number_of_QA + 0.0001;
 		}
 		
 		// Debug
@@ -58,11 +63,14 @@ public partial class MainScene : Node2D
 			_bug_ratio = Math.Clamp(_bug_ratio + 0.1, 0.0, 1.0);
 		}		
 		
+		_bug_ratio =  Math.Clamp(_bug_ratio - _number_of_QA, 0.0, 1.0);
+		
 		_totalCodeLines = _totalCodeLines + _number_of_engineers;
 		_workingCodeLines = _totalCodeLines * (1 - _bug_ratio);
 		
 		_number_of_lines.Text = $"Number of lines: {Math.Round(_workingCodeLines)}";
 		_bug_ratio_label.Text = $"Bug ratio: {Math.Round(_bug_ratio * 100)}%";
 		_number_of_engineers_label.Text = $"Number of engineers: {Math.Round(_number_of_engineers * 100)}";
+		_number_of_QA_label.Text = $"Number of QA: {Math.Round(_number_of_QA * 10000)}";
 	}
 }

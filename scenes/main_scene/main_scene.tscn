@@ -758,3 +758,10 @@ offset_top = -69.0
 offset_right = 252.0
 offset_bottom = -46.0
 text = "Number of engineers: 0"
+
+[node name="Number_of_QA" type="Label" parent="."]
+offset_left = 73.0
+offset_top = -35.0
+offset_right = 113.0
+offset_bottom = -12.0
+text = "Number of QA: 0"
