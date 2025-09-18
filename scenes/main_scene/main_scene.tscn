@@ -753,15 +753,22 @@ offset_bottom = -139.0
 text = "Bug ratio: 0%"
 
 [node name="Number_of_engineers" type="Label" parent="."]
-offset_left = 70.0
-offset_top = -69.0
-offset_right = 252.0
-offset_bottom = -46.0
+offset_left = 407.0
+offset_top = -169.0
+offset_right = 589.0
+offset_bottom = -146.0
 text = "Number of engineers: 0"
 
 [node name="Number_of_QA" type="Label" parent="."]
-offset_left = 73.0
-offset_top = -35.0
-offset_right = 113.0
-offset_bottom = -12.0
+offset_left = 408.0
+offset_top = -128.0
+offset_right = 537.0
+offset_bottom = -105.0
 text = "Number of QA: 0"
+
+[node name="Money" type="Label" parent="."]
+offset_left = 410.0
+offset_top = -217.0
+offset_right = 481.0
+offset_bottom = -194.0
+text = "Money: 0"
